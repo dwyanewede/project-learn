@@ -1,0 +1,3 @@
+default=com.learn.demo.dubbo.extension.DefaultExtension
+sw=com.learn.demo.dubbo.extension.SWExtension
+adaptive=com.learn.demo.dubbo.extension.AdaptiveExtension
