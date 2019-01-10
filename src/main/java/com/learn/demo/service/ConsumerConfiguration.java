@@ -11,14 +11,14 @@ import org.springframework.context.annotation.Configuration;
  *
  * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  */
-@Configuration
-@DubboComponentScan
+//@Configuration
+//@DubboComponentScan
 public class ConsumerConfiguration {
 
     /**
      * 当前应用配置
      */
-    @Bean
+    @Bean("dubbo-annotation-consumer")
     public ApplicationConfig applicationConfig() {
         ApplicationConfig applicationConfig = new ApplicationConfig();
         applicationConfig.setName("dubbo-annotation-consumer");

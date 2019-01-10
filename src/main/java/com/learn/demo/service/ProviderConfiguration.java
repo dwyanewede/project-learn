@@ -19,9 +19,9 @@ import org.springframework.transaction.support.SimpleTransactionStatus;
  *
  * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  */
-@Configuration
-@EnableTransactionManagement
-@DubboComponentScan("com.learn.demo.service") // 扫描 Dubbo 组件
+//@Configuration
+//@EnableTransactionManagement
+//@DubboComponentScan("com.learn.demo.service") // 扫描 Dubbo 组件
 public class ProviderConfiguration {
 
     /**

@@ -1,6 +1,6 @@
 package com.learn.demo.service;
 
-import com.learn.demo.demo.DemoService;
+import com.learn.demo.netty.service.DemoService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class ProviderBootstrap {

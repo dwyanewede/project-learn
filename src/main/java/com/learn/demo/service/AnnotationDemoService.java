@@ -1,6 +1,5 @@
 package com.learn.demo.service;
 
-import com.learn.demo.demo.DemoService;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.transaction.annotation.Transactional;
 
