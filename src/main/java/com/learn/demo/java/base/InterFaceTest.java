@@ -14,4 +14,15 @@ public interface InterFaceTest {
     public default void method2(){
         System.out.println("-------接口默认实现2-------");
     }
+
+    public static void main(String[] args) {
+        InterFaceTest.method1();
+        InterFaceTest interFace = new InterFaceTest() {
+            @Override
+            public void method2() {
+                System.out.println("---------");
+            }
+        };
+        interFace.method2();
+    }
 }

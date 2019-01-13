@@ -1,6 +1,6 @@
 package com.learn.demo.java.base;
 
-public class TestInteger {
+public class IntegerTest {
     public static void main(String[] args) {
         int i = 128;
         Integer i2 = 1218;
@@ -18,5 +18,6 @@ public class TestInteger {
         Integer i9 = new Integer(128);
         Integer i10 = new Integer(128);
         System.out.println(i9 == i10);  //false
+
     }
 }
