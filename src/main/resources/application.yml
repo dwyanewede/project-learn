@@ -1,0 +1,16 @@
+spring:
+  #application:
+   # name: project-lrean-demo
+  ### redis单机配置
+  redis:
+    host:127.0.0.1
+    port:6379
+    timeout:2000
+      #      cluster:
+      #      nodes: 192.168.211.134:7000,192.168.211.134:7001,192.168.211.134:7002
+      #      maxRedirects: 6
+      #      pool:
+      #      max-active: 8
+      #      min-idle: 0
+      #      max-idle: 8
+      #      max-wait: -1
