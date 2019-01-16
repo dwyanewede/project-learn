@@ -10,7 +10,7 @@ import java.util.Set;
 
 /**
  * @ClassName: RedisController
- * @Description: java类作用描述
+ * @Description: 测试redis各种数据存储类型
  * @Author: 尚先生
  * @CreateDate: 2019/1/16 9:58
  * @Version: 1.0
