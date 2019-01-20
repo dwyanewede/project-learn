@@ -5,6 +5,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.cloud.bootstrap.config.PropertySourceLocator;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
+import org.springframework.core.env.Environment;
+import org.springframework.core.env.MapPropertySource;
+import org.springframework.core.env.PropertySource;
+
+import java.util.HashMap;
+
 //@ServletComponentScan("com.learn.demo.servlet")
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 public class DemoApplication {
