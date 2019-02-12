@@ -33,4 +33,11 @@ public class MyHandler extends HandlerInterceptorAdapter {
         System.err.println("-------------自定义拦截器post处理-----------");
     }
 
+    @Override
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler,
+                                @Nullable Exception ex) throws Exception {
+        System.err.println("-------------自定义拦截器complete处理-----------");
+    }
+
+
 }
