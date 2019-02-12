@@ -30,7 +30,7 @@ class Man extends Thread {
         	money+=100000;//年薪在10万以内
         	try {
 				exchanger.exchange(money);//存钱
-                TimeUnit.SECONDS.sleep(5);
+//                TimeUnit.SECONDS.sleep(5);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

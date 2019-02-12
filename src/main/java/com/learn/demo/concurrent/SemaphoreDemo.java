@@ -14,12 +14,12 @@ public class SemaphoreDemo {
                 public void run() {  
                     try {  
                         semaphore.acquire();
-                        System.out.println("线程:" + Thread.currentThread().getName()+"开始下载");  
+                        System.out.println("线程:" + Thread.currentThread().getName()+"开始执行");
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {  
                         e.printStackTrace();  
                     } finally {  
-                        System.out.println("线程:" + Thread.currentThread().getName() + "下载完毕");  
+                        System.out.println("线程:" + Thread.currentThread().getName() + "执行结束");
                         semaphore.release();  
                     }  
                 }  
