@@ -131,6 +131,13 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.7</version>
         </dependency>
+        <!-- spring 事务管理 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>5.0.9.RELEASE</version>
+        </dependency>
+
     </dependencies>
 
     <build>
