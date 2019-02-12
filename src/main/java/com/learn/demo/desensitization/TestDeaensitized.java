@@ -21,7 +21,7 @@ public class TestDeaensitized {
         System.out.println("脱敏后：" + converent1);
         Person person = new Person();
         person.setCertNo("12345678909876541");
-        person.setCustName("尚先生你真帅！");
+        person.setCustName("小妮儿真可爱！");
         System.out.println("脱敏前：" + person);
         String converent2 = DesensitizedUtils.getConverent(person);
         System.out.println("脱敏后：" + converent2);
