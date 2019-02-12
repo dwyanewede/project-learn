@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @ClassName: ChainDemo
- * @Description: java类作用描述
+ * @Description: 链式接口
  * @Author: 尚先生
  * @CreateDate: 2018/12/18 14:58
  * @Version: 1.0

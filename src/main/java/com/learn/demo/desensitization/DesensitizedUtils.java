@@ -95,7 +95,7 @@ public class DesensitizedUtils {
     }
 
     /**
-     * 脱敏数据源为Map时处理方式
+     * 脱敏数据源为Object时处理方式
      *
      * @param val
      * @param annotationName
@@ -111,7 +111,7 @@ public class DesensitizedUtils {
     }
 
     /**
-     * 脱敏数据源为Object时处理方式
+     * 脱敏数据源为Map时处理方式
      *
      * @param reqMap
      * @param annotationName

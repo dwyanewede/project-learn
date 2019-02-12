@@ -4,7 +4,7 @@ import java.util.concurrent.ThreadFactory;
 
 /**
  * @ClassName: AbsterctFactory
- * @Description: java类作用描述
+ * @Description: 创建型接口
  * @Author: 尚先生
  * @CreateDate: 2018/12/17 20:03
  * @Version: 1.0
