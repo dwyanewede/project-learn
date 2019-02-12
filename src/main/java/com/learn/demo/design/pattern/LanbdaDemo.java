@@ -23,3 +23,6 @@ public class LanbdaDemo {
         V get();
     }
 }
+
+
+

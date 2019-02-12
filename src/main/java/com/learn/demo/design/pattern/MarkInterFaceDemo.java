@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * @ClassName: MarkInterFaceDemo
- * @Description: java类作用描述
+ * @Description: 属类接口
  * @Author: 尚先生
  * @CreateDate: 2018/12/17 20:20
  * @Version: 1.0
