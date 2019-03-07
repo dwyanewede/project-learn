@@ -22,7 +22,7 @@ public class BridgeDemo {
         scanService = new ScanServiceImpl(new ScanBuyService() {
             @Override
             public void buy() {
-                System.out.println("TM 扫码购物");
+                System.out.println("TB 扫码购物");
             }
         }, null);
 
