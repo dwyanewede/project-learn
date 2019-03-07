@@ -33,9 +33,12 @@ public class CallbackDemo {
         callbackExecutor.run();
         System.out.println("同步回调...");
 
+        // 异步执行
+        async();
+
     }
 
-    private void async() {
+    private static void async() {
         ExecutorService executorService =
                 Executors.newSingleThreadExecutor();
         executorService.execute(new Runnable() {
