@@ -3,7 +3,7 @@ package com.learn.demo.design.pattern;
 
 /**
  * @ClassName: LanbdaDemo
- * @Description: java类作用描述
+ * @Description: Lanbda示例代码
  * @Author: 尚先生
  * @CreateDate: 2018/12/18 16:45
  * @Version: 1.0
