@@ -19,6 +19,8 @@ public class BridgeDemo {
             }
         }, null);
 
+        scanService.scanBuy();
+
         scanService = new ScanServiceImpl(new ScanBuyService() {
             @Override
             public void buy() {
@@ -30,8 +32,15 @@ public class BridgeDemo {
     }
 
     interface ScanService {
+
+        /**
+         * 登录
+         */
         void scanLogin();
 
+        /**
+         * 购物
+         */
         void scanBuy();
     }
 
