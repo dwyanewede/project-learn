@@ -7,7 +7,7 @@ import java.util.concurrent.Future;
 
 /**
  * @ClassName: ExecutorsDemo
- * @Description: java类作用描述
+ * @Description: 线程池使用
  * @Author: 尚先生
  * @CreateDate: 2018/12/18 8:37
  * @Version: 1.0
