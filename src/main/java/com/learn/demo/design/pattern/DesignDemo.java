@@ -4,7 +4,7 @@ import java.io.*;
 
 /**
  * @ClassName: DesignDemo
- * @Description: java类作用描述
+ * @Description: 适配器、装饰器、享元模式
  * @Author: 尚先生
  * @CreateDate: 2018/12/19 8:55
  * @Version: 1.0
@@ -24,7 +24,7 @@ public class DesignDemo {
         // 字节流，目前拥有的实例
         InputStream in = new FileInputStream("test.txt");
         // 需要的对象
-        // Instream -> Reader
+        // InputStream -> Reader
         Reader reader = new InputStreamReader(in, "UTF-8");
         doReader(reader);
     }
@@ -33,7 +33,7 @@ public class DesignDemo {
     public static void test2() throws FileNotFoundException{
         // 字节流，目前拥有的实例
         InputStream in = new FileInputStream("test.txt");
-        // 装饰着
+        // 装饰者
         FilterInputStream filterInputStream = new DataInputStream(in);
     }
 
