@@ -1,9 +1,6 @@
 package com.learn.demo.design.pattern;
 
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
 /**
  * @ClassName: ExecutorsDemo
@@ -17,7 +14,7 @@ public class ExecutorsDemo {
     // Runnable Callable接口
     // 假设 Runnable 在JDK1.1时提供 throws Exception
     // 那么在JDK1.0运行时会异常
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         ExecutorService executorService =
                 Executors.newSingleThreadExecutor();
@@ -40,19 +37,21 @@ public class ExecutorsDemo {
 
         // Throwable ： Exeception | Error的父类
         Future<String> future = executorService.submit(() -> {
+            TimeUnit.SECONDS.sleep(2);
             return "hello world";
         });
 
         // Checked 异常需要明确在方法签名出现
         //Unchecked异常 不强制在方法签名中出现，建议还是出现NullPointExeception
         try {
+            // 终止当前线程操作
+            future.cancel(true);
             String res = future.get();
-            System.out.println("callable 输出结果： " + res);
-
             future.cancel(res.equals("hello world"));
+            System.out.println("callable 输出结果： " + res);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         executorService.shutdown();
