@@ -2,7 +2,7 @@ package com.learn.demo.design.pattern;
 
 /**
  * @ClassName: BridgeDemo
- * @Description: java类作用描述
+ * @Description: 桥接模式
  * @Author: 尚先生
  * @CreateDate: 2018/12/19 10:48
  * @Version: 1.0
@@ -29,6 +29,24 @@ public class BridgeDemo {
         }, null);
 
         scanService.scanBuy();
+
+        scanService = new ScanServiceImpl(new ScanLoginService() {
+            @Override
+            public void login() {
+                System.out.println("AiQiYi 登录");
+            }
+        });
+
+        scanService.scanLogin();
+
+        scanService = new ScanServiceImpl(new ScanLoginService() {
+            @Override
+            public void login() {
+                System.out.println("WeiBo 登录");
+            }
+        });
+
+        scanService.scanLogin();
     }
 
     interface ScanService {
@@ -63,6 +81,16 @@ public class BridgeDemo {
             this.scanBuyService = scanBuyService;
             this.scanLoginService = scanLoginService;
         }
+
+        public ScanServiceImpl(ScanBuyService scanBuyService) {
+            this.scanBuyService = scanBuyService;
+        }
+
+        public ScanServiceImpl(ScanLoginService scanLoginService) {
+            this.scanLoginService = scanLoginService;
+        }
+
+
 
         @Override
         public void scanLogin() {
