@@ -24,6 +24,14 @@ public class CompositeDemo {
         }
     }
 
+    public static class BImpl implements A{
+
+        @Override
+        public void save() {
+            System.out.println("执行B的实现...");
+        }
+    }
+
     // 组合模式
     // 此处可选择实现接口A
     public static class CompositeA /*implements A*/{
@@ -42,6 +50,7 @@ public class CompositeDemo {
 
     public static void main(String[] args) {
         CompositeA.addA(new AImpl());
+        CompositeA.addA(new BImpl());
         new CompositeA().save();
     }
 }
