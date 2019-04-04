@@ -39,3 +39,5 @@
 #### com.learn.demo.tomcat 自定义扩展Spring Boot内嵌容器
 
 #### com.learn.demo.vertx  vertx异步编程实现
+
+#### com.learn.demo.ibatisExt  IBatis逻辑分页导致SQL慢查询bug修复
