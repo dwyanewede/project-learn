@@ -1,6 +1,6 @@
 package com.learn.demo.design.spring.pattern.structural.bridge.abstraction_change;
 
-import com.sxs.corespring.bridge.FileDownloadImplementor;
+import com.learn.demo.design.spring.pattern.structural.bridge.FileDownloadImplementor;
 
 public class FileDownloaderAbstractionImpl implements FileDownloaderAbstraction {
 
