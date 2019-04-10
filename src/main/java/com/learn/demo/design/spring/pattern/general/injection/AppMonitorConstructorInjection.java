@@ -1,7 +1,7 @@
 package com.learn.demo.design.spring.pattern.general.injection;
 
-import com.sxs.corespring.ioc.EventLogWriter;
-import com.sxs.corespring.ioc.INotifier;
+import com.learn.demo.design.spring.pattern.general.ioc.EventLogWriter;
+import com.learn.demo.design.spring.pattern.general.ioc.INotifier;
 
 public class AppMonitorConstructorInjection {
 	// 事件通知器
