@@ -12,6 +12,8 @@
 
 #### com.learn.demo.design.pattern 设计模式
 
+#### com.learn.demo.design.spring.pattern 设计模式在Spring中的应用
+
 #### com.learn.demo.dubbo.extension dubbo实现SPI扩展机制
 
 #### com.learn.demo.file java文件解析
