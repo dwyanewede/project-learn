@@ -1,4 +1,4 @@
-package com.learn.demo.concurrent;
+package com.learn.demo.concurrent.sxs;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.learn.demo.concurrent;
+package com.learn.demo.concurrent.sxs;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
