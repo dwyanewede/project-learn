@@ -12,6 +12,19 @@ public class SynchronousQueueQuiz {
         System.out.println("queue.offer(1) = " + queue.offer(1));
         System.out.println("queue.offer(2) = " + queue.offer(2));
         System.out.println("queue.offer(3) = " + queue.offer(3));
+
+        // 以下为新建线程重新为SynchronousQueue赋值
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                try {
+//                    queue.put(33);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }).start();
+
         System.out.println("queue.take() = " + queue.take());
         System.out.println("queue.size = " + queue.size());
     }
