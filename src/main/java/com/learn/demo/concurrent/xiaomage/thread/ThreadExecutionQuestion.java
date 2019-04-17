@@ -1,11 +1,14 @@
 package com.learn.demo.concurrent.xiaomage.thread;
 
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
 public class ThreadExecutionQuestion {
 
     public static void main(String[] args) throws InterruptedException {
 
-
-        threadWait();
+        threadLoop();
+//        threadWait();
     }
 
     private static void threadWait() throws InterruptedException {
@@ -79,13 +82,11 @@ public class ThreadExecutionQuestion {
         t2.start();
 
         while (t2.isAlive()) {
-
         }
 
         t3.start();
 
         while (t3.isAlive()) {
-
         }
 
     }
