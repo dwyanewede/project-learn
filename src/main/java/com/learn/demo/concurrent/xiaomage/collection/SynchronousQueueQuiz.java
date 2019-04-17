@@ -2,6 +2,8 @@ package com.learn.demo.concurrent.xiaomage.collection;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.SynchronousQueue;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class SynchronousQueueQuiz {
 
@@ -14,18 +16,78 @@ public class SynchronousQueueQuiz {
         System.out.println("queue.offer(3) = " + queue.offer(3));
 
         // 以下为新建线程重新为SynchronousQueue赋值
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                try {
-//                    queue.put(33);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
+//        AtomicInteger atomicInteger = new AtomicInteger();
+//        for (int i=0 ;i<3; i++ ){
+//            int andIncrement = atomicInteger.getAndIncrement();
+//            new Thread(new Runnable() {
+//                @Override
+//                public void run() {
+//                    try {
+//                        queue.offer(andIncrement);
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
 //                }
-//            }
-//        }).start();
+//            }).start();
+//        }
+
+
+        Thread thread1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+//                    queue.put(99);
+                    queue.put(99);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        thread1.start();
+
+        Thread thread2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    queue.put(77);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        thread2.start();
+
+        Thread thread3 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    TimeUnit.SECONDS.sleep(5);
+                    queue.put(88);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        thread3.start();
+
+        Thread thread4 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    TimeUnit.SECONDS.sleep(2);
+                    queue.put(66);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        thread4.start();
 
         System.out.println("queue.take() = " + queue.take());
+        System.out.println("queue.take() = " + queue.take());
+        System.out.println("queue.take() = " + queue.take());
+        System.out.println("queue.take() = " + queue.take());
         System.out.println("queue.size = " + queue.size());
+        System.out.println("queue = " + queue);
     }
 }
