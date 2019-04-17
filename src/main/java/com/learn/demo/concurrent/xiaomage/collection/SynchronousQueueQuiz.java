@@ -36,8 +36,12 @@ public class SynchronousQueueQuiz {
             @Override
             public void run() {
                 try {
-//                    queue.put(99);
+
+                    // 可以在单个子线程中进行相关赋值，也可以分别赋值，take()为空时会造成阻塞。
                     queue.put(99);
+//                    queue.put(99);
+//                    queue.put(99);
+//                    queue.put(99);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
