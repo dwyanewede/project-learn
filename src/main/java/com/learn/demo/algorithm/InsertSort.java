@@ -12,12 +12,20 @@ import java.util.concurrent.TimeUnit;
  */
 public class InsertSort {
     public static void main(String[] args) throws InterruptedException {
+        String s = new String("abc");
+        String s1 = "abc";
+        String s2 = new String("abc");
+        System.out.println(s == s1.intern());
+        System.out.println(s == s2.intern());
+        System.out.println(s1 == s2.intern());
+        System.out.println(s1 == s.intern());
         // TODO Auto-generated method stub
         int a[] = {3, 1, 5, 7, 2, 4, 9, 6};
+        int b[] = {3, 1, 5, 7, 2, 4, 9, 6};
         new InsertSort().insertSort(a);
         System.out.println("———————————————————直接插入排序算法分割线—————————————————————");
         TimeUnit.SECONDS.sleep(1);
-        new InsertSort().sort(a);
+        new InsertSort().sort(b);
     }
 
     /**
@@ -103,4 +111,5 @@ public class InsertSort {
             System.err.println(i + ":" + Arrays.toString(arr));
         }
     }
+    // 1324   tem = 3  a[0] = 1   -> a[1] = tem
 }
