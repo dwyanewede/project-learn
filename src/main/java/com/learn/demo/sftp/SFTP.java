@@ -298,7 +298,7 @@ public class SFTP {
     }
 
     /**
-     *
+     *单个文件下载实现
      * @param remotePath
      * @param remoteFileName
      * @param localPath
@@ -354,6 +354,7 @@ public class SFTP {
         trandate = trandate.replace("-", "");
         String localDirPath = localpath.concat("/").concat(trandate).concat("/");
         String remoteDirPath = remotepath.concat("/").concat(trandate).concat("/");
+        // 在此处实现指定多文件下载功能
         for (String coreFileName : filenames.split(",")){
             //文件名称截取
             String coreFilaName = String.format(coreFileName.trim(), trandate);
