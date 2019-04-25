@@ -158,6 +158,13 @@
             <artifactId>ibatis-sqlmap</artifactId>
             <version>2.3.4.726</version>
         </dependency>
+
+        <!-- sftp -->
+        <dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+            <version>0.1.51</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -14,3 +14,16 @@ spring:
       #      min-idle: 0
       #      max-idle: 8
       #      max-wait: -1
+
+  # sftp配置
+
+  sftp:
+    hostname: 10.0.155.55
+    port: 22
+    username: test
+    password: test
+    timeout: 6000
+    privateKey:
+    remotepath: /opt/bdepfile/bdp/tset
+    localpath: D:/core
+    filenames: duebillInfo_%s.dat,repayInfo_%s.dat
