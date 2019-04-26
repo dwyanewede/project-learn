@@ -28,7 +28,7 @@ public class LInkedHashMapQuestion {
 
     private static void testGet() {
         Integer integer = map.get("7");
-        System.err.println("LinkedHashMap get 结果：" + integer);
+        System.err.println("LinkedHashMap get 7 结果：" + integer);
     }
 
     private static void testPut() {
