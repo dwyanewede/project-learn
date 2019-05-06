@@ -6,13 +6,13 @@ import java.util.List;
 import java.util.stream.Stream;
 
 /**
- * @ClassName: Java8Lambda
- * @Description: Lambda 表达式
+ * @ClassName: Java8Compartor
+ * @Description: Compartor Lambda 表达式
  * @Author: 尚先生
  * @CreateDate: 2019/5/6 11:02
  * @Version: 1.0
  */
-public class Java8Lambda {
+public class Java8Compartor {
 
     public static void main(String[] args) {
         String[] players = {"Rafael Nadal", "Novak Djokovic",
