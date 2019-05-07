@@ -46,3 +46,5 @@
 #### com.learn.demo.ibatisExt  IBatis逻辑分页导致SQL慢查询bug修复
 
 #### com.learn.demo.sftp spring boot集成sftp
+
+#### com.learn.demo.java8.reconstruct java8代码重构
