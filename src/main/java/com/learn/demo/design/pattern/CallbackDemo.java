@@ -1,6 +1,7 @@
 package com.learn.demo.design.pattern;
 
 import java.util.LinkedList;
+import java.util.Optional;
 import java.util.Queue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -22,7 +23,20 @@ public class CallbackDemo {
 //            return "hello world";
 //        });
 
+        // 同步执行
+        sync();
+
+        // 异步执行
+        async();
+
+    }
+
+    private static void sync() {
+
+
         CallbackExecutor callbackExecutor = new CallbackExecutor();
+
+        Optional.ofNullable(callbackExecutor).get().execute(() -> System.out.println("自定义执行器..."));
 
         callbackExecutor.execute(() -> {
             System.out.println("hello world 1");
@@ -32,10 +46,6 @@ public class CallbackDemo {
         });
         callbackExecutor.run();
         System.out.println("同步回调...");
-
-        // 异步执行
-        async();
-
     }
 
     private static void async() {
