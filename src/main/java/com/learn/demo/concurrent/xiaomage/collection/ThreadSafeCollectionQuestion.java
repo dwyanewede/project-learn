@@ -7,7 +7,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
 public class ThreadSafeCollectionQuestion {
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 
         // Java 9 的实现
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
@@ -36,5 +36,5 @@ public class ThreadSafeCollectionQuestion {
         set = new CopyOnWriteArraySet<>(set);
         map = new ConcurrentHashMap<>(map);
 
-    }
+    }*/
 }
