@@ -3,6 +3,8 @@ package com.learn.demo.java8;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -45,10 +47,27 @@ public class TestJava8 {
         List<Integer> num = Arrays.asList(1,2,3,4,5);
         List<Integer> collect = num.stream().map(n -> n * 2).collect(Collectors.toList());
         System.out.println(collect); //[2, 4, 6, 8, 10]
+
+        // toMap 实现
+        toMap();
  
     }
 
+    private static void toMap() {
 
+        List<Integer> list = Arrays.asList(1,2,3,4,5);
+
+        Map<Integer, Integer> collect = list.stream().collect(Collectors.toMap(x -> x, y -> y * y));
+
+        collect.forEach((key,value) -> System.out.println("key 对应的 value 值 " + collect.get(key)));
+
+
+        Supplier<Map<Integer,Integer>> mapSupplier = () -> list.stream().collect(Collectors.toMap(x->x, y-> y * y));
+
+        Map<Integer, Integer> mapValueAdd = list.stream().collect(Collectors.toMap(x->x, y->y, (v1,v2) -> v1+v2, mapSupplier));
+
+        System.err.println(mapValueAdd);
+    }
 
 
     public static String charAt(String key) {
