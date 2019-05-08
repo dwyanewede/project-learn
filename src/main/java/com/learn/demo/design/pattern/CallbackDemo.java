@@ -3,10 +3,7 @@ package com.learn.demo.design.pattern;
 import java.util.LinkedList;
 import java.util.Optional;
 import java.util.Queue;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
 /**
  * @ClassName: ExecutorsDemo
@@ -25,8 +22,26 @@ public class CallbackDemo {
         // 同步执行
         sync();
 
+        // 异步 Runnable 实现
+        runnable();
+
         // 异步执行
         async();
+
+    }
+
+    private static void runnable() throws InterruptedException {
+       new Thread(() -> System.out.println("hello world runnable 1")).start();
+       new Thread(() -> {
+           try {
+               // 执行 RPC 或者 查询 DB 耗时操作
+               TimeUnit.SECONDS.sleep(1);
+               System.out.println("hello world runnable 2");
+           } catch (InterruptedException e) {
+               e.printStackTrace();
+           }
+           }).start();
+       System.out.println("runnable 异步回调...");
 
     }
 
@@ -48,10 +63,10 @@ public class CallbackDemo {
         Optional.ofNullable(callbackExecutor).get().execute(() -> System.out.println("自定义执行器..."));
 
         callbackExecutor.execute(() -> {
-            System.out.println("hello world sync");
+            System.out.println("hello world sync 1");
         });
         callbackExecutor.execute(() -> {
-            System.out.println("hello world sync");
+            System.out.println("hello world sync 2");
         });
         callbackExecutor.run();
         System.out.println("sync 同步回调...");
@@ -63,11 +78,11 @@ public class CallbackDemo {
         executorService.execute(new Runnable() {
             @Override
             public void run() {
-                System.out.println("Hello World async");
+                System.out.println("Hello World async 1");
             }
         });
         executorService.execute(() ->{
-            System.out.println("Hello World async");
+            System.out.println("Hello World async 2");
         });
 
         executorService.execute(() ->{
