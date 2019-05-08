@@ -48,3 +48,5 @@
 #### com.learn.demo.sftp spring boot集成sftp
 
 #### com.learn.demo.java8.reconstruct java8代码重构
+
+#### com.learn.demo.spring.lifecycle spring生命周期梳理
