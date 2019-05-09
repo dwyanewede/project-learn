@@ -12,7 +12,7 @@ public class HowToStopThreadQuestion {
         t1.start();
 
         // 改变 action stopped 状态
-        action.setStopped(true);
+        action.setStopped(false);
 
         t1.join();
 
@@ -24,7 +24,8 @@ public class HowToStopThreadQuestion {
 
         t2.start();
         // 中断操作(仅仅设置状态，而并非中止线程）
-        t2.interrupt();
+        // 设置 t2中断 将不会执行 t2对应的操作
+//        t2.interrupt();
         t2.join();
     }
 
