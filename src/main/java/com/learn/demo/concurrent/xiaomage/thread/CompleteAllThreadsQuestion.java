@@ -22,6 +22,7 @@ public class CompleteAllThreadsQuestion {
         ThreadGroup threadGroup = mainThread.getThreadGroup();
         // 活跃的线程数
         int count = threadGroup.activeCount();
+        System.out.println("当前活跃线程总数：" + count);
         Thread[] threads = new Thread[count];
         // 把所有的线程复制 threads 数组
         threadGroup.enumerate(threads, true);
