@@ -86,12 +86,12 @@ public class SynchronousQueueQuiz {
             }
         });
         thread4.start();
-
+        System.out.println("before take queue.size = " + queue.size());
         System.out.println("queue.take() = " + queue.take());
         System.out.println("queue.take() = " + queue.take());
         System.out.println("queue.take() = " + queue.take());
         System.out.println("queue.take() = " + queue.take());
-        System.out.println("queue.size = " + queue.size());
+        System.out.println("after take queue.size = " + queue.size());
         System.out.println("queue = " + queue);
     }
 }
