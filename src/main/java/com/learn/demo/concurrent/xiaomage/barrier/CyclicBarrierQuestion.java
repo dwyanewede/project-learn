@@ -16,7 +16,8 @@ public class CyclicBarrierQuestion {
                 try {
                     // CyclicBarrier.await() = CountDownLatch.countDown() + await()
                     // 先计数 -1，再判断当计数 > 0 时候，才阻塞
-                    barrier.await();
+                    int count = barrier.await();
+                    System.err.println("countDownLatch 可循环实现： " + count);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } catch (BrokenBarrierException e) {
