@@ -1,5 +1,7 @@
 package com.learn.demo.concurrent.xiaomage.thread;
 
+import java.util.concurrent.TimeUnit;
+
 public class ThreadExceptionQuestion {
 
     public static void main(String[] args) throws InterruptedException {
@@ -12,11 +14,17 @@ public class ThreadExceptionQuestion {
 
         // main 线程 -> 子线程
         Thread t1 = new Thread(() -> {
+            try {
+                TimeUnit.SECONDS.sleep(5);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             throw new RuntimeException("数据达到阈值");
         }, "t1");
 
         t1.start();
-        // main 线程会中止吗？
+        System.out.println(t1.isAlive());
+        // main 线程会中止吗？ 可以控制顺序执行
         t1.join();
 
         // Java Thread 是一个包装，它由 GC 做垃圾回收
