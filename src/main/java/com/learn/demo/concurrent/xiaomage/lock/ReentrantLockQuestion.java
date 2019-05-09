@@ -69,6 +69,7 @@ public class ReentrantLockQuestion {
 
     private static void synchronizedAction(Runnable runnable) {
         lock.lock();
+        System.out.println("当前线程： " + Thread.currentThread().getName());
         try {
             runnable.run();
         } finally {
