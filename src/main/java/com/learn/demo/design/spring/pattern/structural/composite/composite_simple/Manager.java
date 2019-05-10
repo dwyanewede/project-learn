@@ -46,9 +46,8 @@ public class Manager implements IEmployee {
 		System.out.println("Name =" + getName());
 		System.out.println("Salary =" + getSalary());
 		System.out.println("-------------");
-		
-		for(IEmployee employee : this.employees) {
-			employee.print();
-		}
+
+		// 遍历输出结果
+		employees.forEach(con -> con.print());
 	}
 }
