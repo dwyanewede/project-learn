@@ -13,7 +13,7 @@ import java.util.Map;
  * @CreateDate: 2019/5/10 11:58
  * @Version: 1.0
  */
-@Service(value = "appCreditLimitSelect")
+@Service(value = "app01CreditLimitSelect")
 public class AppCreditLimitSelectCommand implements LoanCommand {
     @Override
     public Map<String, Object> execute(Map<String, Object> reqMap) {
