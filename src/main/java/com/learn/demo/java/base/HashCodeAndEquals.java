@@ -51,6 +51,32 @@ public class HashCodeAndEquals {
             System.out.println("k: " + k + "   " + "v: " + v);
         });
 
+
+        System.out.println("++++++++++++++++++++++基本数据类型与包装数据类型对比+++++++++++++++++++++++");
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
+
+//        int i = 100; // 1000
+//        int k = 100; // 1000
+//        Integer j = 100; // 1000
+//        Integer x = 100; // 1000
+
+
+        double i = 100.0; // 1000.0
+        double k = 100.0; // 1000.0
+        Double j = 100.0; // 1000.0
+        Double x = 100.0; // 1000.0
+
+        System.out.println(i == k);
+        System.out.println(i == j);
+        System.out.println(j == k);
+        System.out.println(j == x);
+
+
+        System.out.println(j.equals(i));
+        System.out.println(i == j);
+        System.out.println(j.equals(k));
+        System.out.println(j.equals(x));
+
     }
 
 }
