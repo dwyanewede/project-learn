@@ -1,4 +1,4 @@
-package com.learn.demo.java.base;
+package com.learn.demo.java.base.reference;
 
 /**
  * @ClassName: Test3
