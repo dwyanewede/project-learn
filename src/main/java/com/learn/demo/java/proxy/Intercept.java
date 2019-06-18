@@ -4,7 +4,7 @@ import java.lang.annotation.*;
 
 /**
  * @ClassName: Intercept
- * @Description: java类作用描述
+ * @Description: 自定义拦截器注解
  * @Author: 尚先生
  * @CreateDate: 2019/6/17 16:28
  * @Version: 1.0

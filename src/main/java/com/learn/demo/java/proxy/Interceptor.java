@@ -13,7 +13,7 @@ import java.lang.reflect.Method;
 
 /**
  * @ClassName: Interceptor
- * @Description: java类作用描述
+ * @Description: 拦截器实现类
  * @Author: 尚先生
  * @CreateDate: 2019/6/17 15:12
  * @Version: 1.0

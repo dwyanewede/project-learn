@@ -19,33 +19,34 @@ public class Bootstrap {
     public static void main(String[] args) {
 
         // 动态代理实现
-        ReflectionHandler reflectionHandler = new ReflectionHandler(new BuyServiceImpl());
-
-        BuyService proxy = reflectionHandler.getProxy();
-
-        String computer = proxy.buyComputer(proxy);
-
-        String phone = proxy.buyPhone(proxy);
-
-        System.out.println(computer + "\r\n" + phone);
+//        ReflectionHandler reflectionHandler = new ReflectionHandler(new BuyServiceImpl());
+//
+//        BuyService proxy = reflectionHandler.getProxy();
+//
+//        String computer = proxy.buyComputer(proxy);
+//
+//        String phone = proxy.buyPhone(proxy);
+//
+//        System.out.println(computer + "\r\n" + phone);
 
 
         // spring 采用的 jdk 动态代理
-//        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-//
-//        context.scan("com.learn.demo.java.proxy");
-//
-//        context.register(Interceptor.class);
-//
-//        context.refresh();
-//
-//        BuyService bean = context.getBean("buyServiceImpl", BuyService.class);
-//
-//        String phone = bean.buyPhone(bean);
-//
-//        System.err.println("=========Bootstrap.class============== " + phone);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+
+        context.scan("com.learn.demo.java.proxy");
+
+        context.register(Interceptor.class);
+
+        context.refresh();
+
+        BuyService bean = context.getBean("buyServiceImpl", BuyService.class);
+
+        String phone = bean.buyPhone(bean);
+
+        System.err.println("=========Bootstrap.class============== " + phone);
 
 
+        // 输出代理对象 class 文件
         createProxyClassFile();
 
     }
