@@ -2,6 +2,8 @@ package com.learn.demo.file;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
 
 /**
  * @ClassName: RandomAccessFileDemo
@@ -35,15 +37,36 @@ public class RandomAccessFileDemo {
 
 
     private static void writeRandomAccessFile(RandomAccessFile accessFile) throws IOException {
-        synchronized (RandomAccessFileDemo.class) {
-            for (int i = 1; i < 10; i++) {
-                StringBuilder writeBuffer = new StringBuilder();
-                writeBuffer.append("\r\n");
-                writeBuffer.append("i love you " + i);
-                accessFile.write(writeBuffer.toString().getBytes());
+
+        // 方式一
+        FileChannel fileChannel = accessFile.getChannel();
+
+        ByteBuffer buf = ByteBuffer.allocate(1024);
+
+        int bytesRead = fileChannel.read(buf);
+
+        while(bytesRead != -1)
+        {
+            buf.flip();
+            while(buf.hasRemaining())
+            {
+                System.out.print((char)buf.get());
             }
 
+            buf.compact();
+            bytesRead = fileChannel.read(buf);
         }
+
+//        方式二
+//        synchronized (RandomAccessFileDemo.class) {
+//            for (int i = 1; i < 10; i++) {
+//                StringBuilder writeBuffer = new StringBuilder();
+//                writeBuffer.append("\r\n");
+//                writeBuffer.append("i love you " + i);
+//                accessFile.write(writeBuffer.toString().getBytes());
+//            }
+//
+//        }
         //操作结束后一定要关闭文件
 //        accessFile.close();
 
