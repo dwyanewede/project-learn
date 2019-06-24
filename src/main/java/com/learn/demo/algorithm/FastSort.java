@@ -11,21 +11,27 @@ public class FastSort{
 
      public static void main(String []args){
         System.out.println("Hello World");
-        int[] a = {12,20,5,16,15,1,30,45,23,9};
+//        int[] a = {12,20,5,16,15,1,30,45,23,9};
+        int[] a = {5,3,7,6,2,4,9,8};
         int start = 0;
         int end = a.length-1;
         sort(a,start,end);
-        for(int i = 0; i<a.length; i++){
-             System.out.println(a[i]);
-         }
-        
+        print(a);
+
      }
-     
-     public static void sort(int[] a,int low,int high){
+
+    private static void print(int[] a) {
+        for(int i = 0; i<a.length; i++){
+             System.out.print(a[i] + " ");
+         }
+        System.out.println();
+    }
+
+    public static void sort(int[] a,int low,int high){
          int start = low;
          int end = high;
          int key = a[low];
-
+         print(a);
          while(end>start){
              //从后往前比较
              while(end>start&&a[end]>=key)  //如果没有比关键值小的，比较下一个，直到有比关键值小的交换位置，然后又从前往后比较
